@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  elasticsearch:
+    image: elasticsearch:2.4.6
+    restart: on-failure
+    ports:
+      - '9200:9200'
+      - '9300:9300'
+    volumes:
+      - /srv/docker/elasticsearch/:/usr/share/elasticsearch/data:Z
